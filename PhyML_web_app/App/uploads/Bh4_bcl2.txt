@@ -1,0 +1,70 @@
+gi|179367|gb|AAA51813.1|                ------------------------------------------------------------
+gi|312597033|pdb|2XA0|A                 ------------------------------------------------------------
+gi|81870435|sp|O35843|O35843_MOUSE      ------------------------------------------------------------
+gi|225734035|pdb|3CVA|X                 ------------------------------------------------------------
+gi|148235481|ref|NP_001082147.1|        ------------------------------------------------------------
+gi|301336130|ref|NP_001081573.2|        ------------------------------------------------------------
+gi|6680774|ref|NP_031563.1|             ------------------------------------------------------------
+gi|159162768|pdb|1O0L|A                 ------------------------------------------------------------
+gi|82407680|pdb|2A5Y|A                  -----------------------------------------------lpspsrqastrrm
+gi|450580|gb|AAA20077.1|                mtrdamvdsmdmanssqntfrrrtmatsemreflstkdaepnnfgmqtipesptpstptr
+                                                                                                    
+
+gi|179367|gb|AAA51813.1|                ---------mahagrTGYDNREIVMKYIHYKLSQRGYEWDAGdvgaappgaapapgifss
+gi|312597033|pdb|2XA0|A                 ---------mahagrTGYDNREIVMKYIHYKLSQRGYEWDAGdvgaappgaapapgifss
+gi|81870435|sp|O35843|O35843_MOUSE      ---------------MSQSNRELVVDFLSYKLSQKGYSWSQFsdveenrteapeeteaer
+gi|225734035|pdb|3CVA|X                 ---------------MSQSNRELVVDFLSYKLSQKGYSWSQFsdveenrteapegtesem
+gi|148235481|ref|NP_001082147.1|        ---------------MEGSSRDLVEKFVSKKLSQN-EACRKFsnnpqpnaisngtstser
+gi|301336130|ref|NP_001081573.2|        ------------maqSDLGSRALVEDLVRYKLCQRSLVPEPSgaascalhsamraagdef
+gi|6680774|ref|NP_031563.1|             ----------matpaSTPDTRALVADFVGYKLRQKGYVCGAGpgegpaadplhqamraag
+gi|159162768|pdb|1O0L|A                 -----gplgsmatpaSAPDTRALVADFVGYKLRQKGYVCGAGpgegpaadplhqamraag
+gi|82407680|pdb|2A5Y|A                  sigesidgkindweePRLDIEGFVVDYFTHRIRQNGMEWFGApglpsgvqpehemmrvmg
+gi|450580|gb|AAA20077.1|                rmsigdstriydweePRFNIQGFVVDYFTYRIAQNGLDWYDApalpdgvqkehemmrslg
+                                                            . :* . .  :: *.                         
+
+gi|179367|gb|AAA51813.1|                qpghtphpaasrdpvartsplqtpaapgaaagpalspvppvvhlalrqagddfsrryrgd
+gi|312597033|pdb|2XA0|A                 qpghtphpaasrdpvartsplqtpaapgaaagpalspvppvvhltlrqagddfsrryrrd
+gi|81870435|sp|O35843|O35843_MOUSE      etpsaingnpswhladspavngatghsssldarevipmaavkqalreagdefelryrraf
+gi|225734035|pdb|3CVA|X                 etpsaingnpswhladspavngatghsssldarevipmaavkqalreagdefelryrraf
+gi|148235481|ref|NP_001082147.1|        pgegatqgiveeevlqalleateefelryqrafsdltsqlhitqdtaqqsfqqvmgelfr
+gi|301336130|ref|NP_001081573.2|        eerfrqafseistqihvtpgtayarfaevagslfqggvnwgrivaffvfgaalcaesvnk
+gi|6680774|ref|NP_031563.1|             defetrfrrtfsdlaaqlhvtpgsaqqrftqvsdelfqggpnwgrlvaffvfgaalcaes
+gi|159162768|pdb|1O0L|A                 defetrfrrtfsdlaaqlhvtpgsaqqrftqvsdelfqggpnwgrlvaffvfgaalcaes
+gi|82407680|pdb|2A5Y|A                  tifekkhaenfetfseqllavprisfslyqdvvrtvgnaqtdqspmsygrliglisfggf
+gi|450580|gb|AAA20077.1|                tifekrhmemfenfseqllavpkisfslyqevvqtvgnssntpcpmsygrliglisfggm
+                                                                                                    
+
+gi|179367|gb|AAA51813.1|                faemssqlhltpftargrfatvveelfrdgvnwgrivaffefggvmcvesvnremsplvd
+gi|312597033|pdb|2XA0|A                 faemssqlhltpftargrfatvveelfrdgvnwgrivaffefggvmcvesvnremsplvd
+gi|81870435|sp|O35843|O35843_MOUSE      sdltsq-lhitpgtayqsfeqvvnelfrdgvnwgrivaffsfggalcvesvdkemqvlvs
+gi|225734035|pdb|3CVA|X                 sdltsq-lhitpgtayqsfeqvvnelfrdgvnagrivaffsfggalcvesvdkemqvlvs
+gi|148235481|ref|NP_001082147.1|        dgtnwg-rivaffsfgralcvesankemtdllprivqwmvnylehtlqpwmqenggweaf
+gi|301336130|ref|NP_001081573.2|        emspll-priqdwmvtyletnlrdwiqsnggwngfltlygdgaieearrqregnwaslkt
+gi|6680774|ref|NP_031563.1|             vnkeme-plvgqvqdwmvayletrladwihssggwaeftalygdgaleearrlregnwas
+gi|159162768|pdb|1O0L|A                 vnkeme-plvgqvqewmveyletrladwihssggwaeftalygdgaleearrlregnwas
+gi|82407680|pdb|2A5Y|A                  vaakmm-esvelqgqvrnlfvytslfiktrirnnwkehnrswddfmtlgkqmkedyerae
+gi|450580|gb|AAA20077.1|                vaakmm-esaelqgqvrnllmytslfiktrirqswkehnrswadfmklgqqmkedyekek
+                                                                                             .      
+
+gi|179367|gb|AAA51813.1|                nialwmteylnrhlhtwiqdnggwdafv-elygpsmrplfdfswlslktllslalvgaci
+gi|312597033|pdb|2XA0|A                 nialwmteylnrhlhtwiqdnggwdafv-elygpsmr-----------------------
+gi|81870435|sp|O35843|O35843_MOUSE      riaswmatylndhlepwiqenggwgvsggtplrsvfrrlvqvpgvaehvcdpslwevete
+gi|225734035|pdb|3CVA|X                 riaawmatylndhlepwiqenggwdtfvelygnnaaaesrkgqerfnlehhhhhh-----
+gi|148235481|ref|NP_001082147.1|        vglygknaaaqsresqerfgrlltiviltgvfalvcymrrr-------------------
+gi|301336130|ref|NP_001081573.2|        vltgavalgalmtvgalfask---------------------------------------
+gi|6680774|ref|NP_031563.1|             vrtvltgavalgalvtvgaffask------------------------------------
+gi|159162768|pdb|1O0L|A                 vrtvltgavalgal----------------------------------------------
+gi|82407680|pdb|2A5Y|A                  aekvgrrkqnrr------------------------------------------------
+gi|450580|gb|AAA20077.1|                daeegkrlkswsiigasviavivcgriifsfk----------------------------
+                                                                                                    
+
+gi|179367|gb|AAA51813.1|                tlgaylshk--
+gi|312597033|pdb|2XA0|A                 -----------
+gi|81870435|sp|O35843|O35843_MOUSE      gsevqgppqll
+gi|225734035|pdb|3CVA|X                 -----------
+gi|148235481|ref|NP_001082147.1|        -----------
+gi|301336130|ref|NP_001081573.2|        -----------
+gi|6680774|ref|NP_031563.1|             -----------
+gi|159162768|pdb|1O0L|A                 -----------
+gi|82407680|pdb|2A5Y|A                  -----------
+gi|450580|gb|AAA20077.1|                -----------

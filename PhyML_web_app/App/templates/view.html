@@ -1,0 +1,11 @@
+{% extends "skeleton.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div>Click on files name to get redirected to the read view</div>
+{% for file in listFiles %}
+<ul><a href="/read/{{file}}">{{file}}</a></ul>
+{% endfor %}
+
+{% endblock %}

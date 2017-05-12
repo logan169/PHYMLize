@@ -1,0 +1,12 @@
+{% extends "skeleton.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+Filename : {{filename}}
+<br>
+<br>
+{% for line in fileLines %}
+    <ul>{{line}}</ul>
+{% endfor %}
+{% endblock %}

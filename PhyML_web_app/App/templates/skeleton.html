@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8 character">
+    <!--<title>PhyMl </title>-->
+    <title>{% block title %}PhyMl Web Server{% endblock %} </title>
+
+
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link href="{{url_for ('static',filename='css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+    <link href="{{url_for ('static',filename='css/bootstrap-theme.min.css')}}" rel="stylesheet" media="screen">
+    <link href="{{url_for ('static',filename='css/skeleton.css')}}" rel="stylesheet" media="screen">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--phyml js-->
+    <script src="{{url_for ('static',filename='js/functions.js')}}"></script>
+    <script src="{{url_for ('static',filename='js/utils.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for ('static',filename='js/bootstrap.min.js')}}"></script>
+    {% endblock %}
+</head>
+
+<body background="{{url_for ('static',filename='img/suprim_circupix_treedyn1.jpg')}}"  background-size: 100%>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="{{url_for('home')}}">Home</a>
+            </li>
+            <li>
+                <a href="{{url_for('new')}}">New</a>
+            </li>
+            <li>
+                <a href="{{url_for('run')}}">Run</a>
+            </li>
+            <li>
+                <a href="{{url_for('status')}}">Status</a>
+            </li>
+            <li>
+                <a href="{{url_for('reset')}}">Reset</a>
+            </li>
+            <li>
+                <a href="{{url_for('view')}}">View</a>
+            </li>
+            <li>
+                <a href="{{url_for('read')}}">Read</a>
+            </li>
+        </ul>
+        <div class="pull-right">
+
+
+            {% if phyML_id not in [-1] %}
+             <a href="#" class="btn btn-default btn-sm">ID : {{phyML_id}}</a>
+            {% else %}
+            <a href="#" class="btn btn-default btn-sm">ID : None</a>
+            {% endif %}
+
+            {% if phyML_status in [-1] %}
+                <a href="#" class="btn btn-default btn-sm">Status : None</a>
+            {% elif phyML_status in [0] %}
+                <a href="#" class="btn btn-default btn-sm btn-info">Status : Init</a>
+            {% elif phyML_status in [1] %}
+                <a href="#" class="btn btn-default btn-sm btn-warning">Status : Running</a>
+            {% elif phyML_status in [2] %}
+                <a href="#" class="btn btn-default btn-sm btn-success">Status : Done</a>
+            {% elif phyML_status in [3] %}
+                <a href="#" class="btn btn-default btn-sm btn-danger">Status : Error</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class ='well'>
+            {% for message in messages %}
+            <div class=flashes>{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% if output %}
+           <div> {{ output }}</div>
+        {% endif %}
+        </div>
+
+    <div class ='well trans'>
+        <!-- block here -->
+        {% block content %}
+        {% endblock content%}
+    </div>
+</div>
+
+
+</body>
+
+
+</html>

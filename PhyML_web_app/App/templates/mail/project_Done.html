@@ -1,0 +1,14 @@
+{% extends "Mail-skeleton.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div>
+
+
+<p>Your job {{jobName}} is now done.</p>
+<p>Results has been joined to this mail and is accessible trought this link <a href="/read/{{filename}}">{{filename}}</a></p>
+
+<p>Have a good day.</p>
+</div>
+{% endblock %}

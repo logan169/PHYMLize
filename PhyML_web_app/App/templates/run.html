@@ -1,0 +1,19 @@
+{% extends "skeleton.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<p>Verify your options and click then on 'Run Analysis' button or return on <a href="{{url_for('new')}}">New</a> page to modify your selection</p>
+
+<h4> Options List </h4>
+<br>
+{% for item,value in options.items() %}
+<ul>{{item}} : {{value}} </ul>
+{% endfor %}
+<br>
+<form class="form" action='/run' method="post" role="form">
+    <button type="submit"  name='envoi' class="btn btn-default">Run Analysis</button>
+</form>
+
+
+{% endblock %}

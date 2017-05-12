@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8 character">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link href="{{url_for ('static',filename='css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+    <link href="{{url_for ('static',filename='css/bootstrap-theme.min.css')}}" rel="stylesheet" media="screen">
+
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for ('static',filename='js/bootstrap.min.js')}}"></script>
+    {% endblock %}
+</head>
+
+<body background="{{url_for ('static',filename='img/suprim_circupix_treedyn1.jpg')}}"  background-size: 100%>
+<div class="container">
+    <div class="well trans">
+        <h4>PhyMl Web Server</h4>
+        {% block content %}
+        {% endblock content%}
+    </div>
+</div>
+
+</body>

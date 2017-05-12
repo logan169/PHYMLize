@@ -1,0 +1,217 @@
+{% extends "skeleton.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+
+
+<div class="col-lg-2"></div>
+<div class="container" onload="DoLoad()">
+    <div class="col-lg-8 opak">
+        <div><p>Select your analysis options:</p></div>
+        <form method="POST" enctype="multipart/form-data" name="options" onsubmit="return validate()">
+
+            <input name="MAX_FILE_SIZE" value="33554432" type="hidden">
+            <input name="ServerLoad" value="9" type="hidden">
+
+            <table class="formulaire">
+                <caption>Input Data</caption>
+                <tbody>
+                <tr>
+                    <td width="34%">Sequences<br>(PHYLIP format)</td>
+                    <td><input name="userfile" size="15" type="file"></td>
+                    <td align="right" width="17%">
+                        File<input name="DataOption" value=""  checked="checked" onclick="inputFileChanged(0)"  type="radio">
+                    </td>
+                    <td width="17%" type="hidden">
+                        <input name="DataOption"  type=hidden value="phyml_ex.txt" onclick="inputFileChanged(0)" type="radio"> <a href="http://www.atgc-montpellier.fr/phyml/phyml_ex.txt"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Data Type</td>
+                    <td align="right">
+                        DNA<input disabled="" name="SequenceTypeOption" value="nt" onclick="sequenceTypeChanged()" checked="checked" type="radio">
+                    </td>
+                    <td>
+                        <input disabled="" name="SequenceTypeOption" value="aa" onclick="sequenceTypeChanged()" type="radio">Amino-Acids
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Sequence file</td>
+                    <td align="right">
+                        interleaved<input disabled="" name="SequenceFormatOption" value=" " checked="checked" type="radio">
+                    </td>
+                    <td>
+                        <input disabled="" name="SequenceFormatOption" value=" -q" type="radio">sequential
+                    </td>
+                </tr>
+                <tr class="last">
+                    <td>Number of data sets</td>
+                    <td colspan="3"><input name="NbDataSets" value="1" size="15" maxlength="15"></td>
+                </tr>
+                </tbody></table>
+            <br>
+            <table class="formulaire">
+                <caption>Substitution Model</caption>
+                <tbody><tr>
+                    <td width="34%">Substitution model</td>
+                    <td colspan="3">
+                        <select name="ModelName" onchange="modelChanged()"><option value="JC69">JC69</option><option value="K80">K80</option><option value="F81">F81</option><option value="F84">F84</option><option value="HKY85">HKY85</option><option value="TN93">TN93</option><option value="GTR">GTR</option></select>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Equilibrium frequencies</td>
+                    <td align="right" width="17%">
+                        <span id="Fq_left">optimized</span>
+                        <input name="FqOption" value="m" type="radio">
+                    </td>
+                    <td width="17%">
+                        <input name="FqOption" value="e" checked="checked" type="radio">
+                        <span id="Fq_right">empirical</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transition / transversion ratio <br>(DNA models)</td>
+                    <td><input disabled="" name="Kappa" size="15" maxlength="15"></td>
+                    <td align="right">
+                        fixed<input name="KappaOption" onclick="kappaOptionChanged()" value="" type="radio">
+                    </td>
+                    <td width="17%">
+                        <input name="KappaOption" onclick="kappaOptionChanged()" value="e" checked="checked" type="radio">estimated
+                    </td>
+                </tr>
+                <tr>
+                    <td>Proportion of invariable sites</td>
+                    <td><input name="Invar" value="0.0" size="15" maxlength="15"></td>
+                    <td align="right">
+                        fixed<input name="InvarOption" value="" checked="checked" type="radio">
+                    </td>
+                    <td>
+                        <input name="InvarOption" value="e" type="radio">estimated
+                    </td>
+                </tr>
+                <tr>
+                    <td>Number of substitution rate categories</td>
+                    <td colspan="3"><input name="NbCatg" onchange="nbCatgChanged()" value="4" size="15" maxlength="15"></td>
+                </tr>
+                <tr class="last">
+                    <td>Gamma shape parameter</td>
+                    <td><input disabled="" name="Gamma" size="15" maxlength="15"></td>
+                    <td align="right">
+                        fixed<input name="GammaOption" onclick="gammaOptionChanged()" value="" type="radio">
+                    </td>
+                    <td>
+                        <input name="GammaOption" onclick="gammaOptionChanged()" value="e" checked="checked" type="radio">estimated
+                    </td>
+                </tr>
+                </tbody></table>
+            <br>
+            <table class="formulaire">
+                <caption>Tree Searching</caption>
+                <tbody>
+                <tr>
+                    <td width="34%">Starting tree(s)</td>
+                    <td><input disabled="" name="StartingTree" size="15" type="file"></td>
+                    <td align="right" width="17%">
+                        File<input name="StartingTreeOption" onclick="startingTreeChanged()" value="" type="radio">
+                    </td>
+                    <td width="17%">
+                        <input name="StartingTreeOption" onclick="startingTreeChanged()" value="BIONJ" checked="checked" type="radio">BIONJ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type of tree improvement</td>
+                    <td colspan="3"><select name="MovementName" onchange="movementNameChanged()"><option value="NNI">NNI</option><option value="SPR">SPR</option><option value="SPR &amp; NNI">SPR &amp; NNI</option></select></td>
+                </tr>
+                <tr>
+                    <td>Number of random starting tree</td>
+                    <td><select disabled="" name="RandomNum"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></td>
+                    <td align="right">
+                        yes<input disabled="" name="OptRandomOption" onclick="randomOptionChanged()" value="y" type="radio">
+                    </td>
+                    <td>
+                        <input name="OptRandomOption" onclick="randomOptionChanged()" value="n" checked="checked" type="radio">no
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Optimise topology</td>
+                    <td align="right">
+                        yes<input name="OptTopoOption" onclick="optimiseTopoOptionChanged()" value="y" checked="checked" type="radio">
+                    </td>
+                    <td>
+                        <input name="OptTopoOption" onclick="optimiseTopoOptionChanged()" value="n" type="radio">no
+                    </td>
+                </tr>
+                <tr class="last">
+                    <td colspan="2">Optimise branch lengths</td>
+                    <td align="right">
+                        yes<input name="OptBranchesOption" onclick="optimiseBranchesOptionChanged()" value="y" checked="checked" type="radio">
+                    </td>
+                    <td>
+                        <input disabled="" name="OptBranchesOption" onclick="optimiseBranchesOptionChanged()" value="n" type="radio">no
+                    </td>
+                </tr>
+                </tbody></table>
+            <br>
+            <table class="formulaire">
+                <caption>Branch Support</caption>
+                <tbody><tr>
+                    <td width="34%">Fast likelihood-based method</td>
+                    <td>
+                        <select name="TestValue"><option value="-4">aLRT SH-like</option><option value="-2">aLRT Chi2-based</option><option value="-5">aBayes</option></select>
+                    </td>
+                    <td></td>
+
+                    <td align="right" width="17%">
+                        yes<input name="OptaLRTOption" onclick="aLRTOptionChanged()" value="y" checked="checked" type="radio">
+                    </td>
+                    <td width="17%">
+                        <input name="OptaLRTOption" onclick="aLRTOptionChanged()" value="n" type="radio">no
+                    </td>
+                </tr>
+                <tr class="last">
+                    <td>Perform bootstrap</td>
+                    <td colspan="2"><input disabled="" name="NbBtsDataSets" value="100" size="15" maxlength="15"></td>
+                    <td align="right">
+                        yes<input name="OptBootOption" onclick="bootOptionChanged()" value="y" type="radio">
+                    </td>
+
+                    <td>
+                        <input name="OptBootOption" onclick="bootOptionChanged()" value="n" checked="checked" type="radio">no
+                    </td>
+                </tr>
+                </tbody></table>
+            <br>
+
+            <table class="formulaire">
+                <tbody><tr>
+                    <td width="34%">Name of your analysis</td>
+                    <td><input name="Analysis" size="25"></td>
+                </tr>
+                <tr>
+                    <td width="34%">PhyMl Path</td>
+                    <td><input name="PhymlPath" size="25"></td>
+                </tr>
+                <div class="hidden">
+                <tr>
+
+                    <td><input name="Email" size="25" value="aze@zae.com" type="hidden"></td>
+                </tr>
+                <tr class="last">
+
+                    <td colspan="3"><input name="Email2" size="25" value="aze@zae.com" type="hidden"></td>
+                </tr></div>
+                </tbody></table>
+            <br>
+            <div align="center">
+                <input class="button" value="Save parameter" type="submit">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col-lg-2"></div>
+
+
+{% endblock %}

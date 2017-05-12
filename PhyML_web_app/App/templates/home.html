@@ -1,0 +1,37 @@
+{% extends "skeleton.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<h3 style="text-decoration: underline;"> Views description :</h3>
+<br>
+
+<div>
+        <h4>/new  :</h4>
+        <p>Load inputs parameter. Return an unique ID and status {"id":1234, "status":0}</p>
+        <br>
+        <h4>/run :</h4>
+        <p>Run PhyML analysis. Get ID through a form and return json containing new execution status id.</p>
+        <br>
+        <h4>/status :</h4>
+        <p> Return execution status id for the current analysis</p>
+        <br>
+        <h4>/reset :</h4>
+        <p>Cancel current analysis and remove all associated files.</p>
+        <br>
+        <h4>/view:</h4>
+        <p>Return json containing available output files</p>
+        <br>
+        <h4>/read :</h4>
+        <p>Return file's content for file entered as a json parameter</p>
+
+</div>
+<br>
+
+<div>
+        <h5>
+                Have fun making phylogenic analysis!
+        </h5>
+
+</div>
+{% endblock %}
