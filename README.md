@@ -31,7 +31,7 @@ Per default, it should be <http://localhost:8084> but may change depending on yo
 * If you find that you've done a mistake entering input parameter, you could stop analysis and erase all associated file at anytime by clicking on the 'reset' view
 * Once analysis is done, click on the 'view' view and click on desired filename to display his content. You could also search for a specific filename in the 'Read' view.
 
-Please refer to Phyml [article]((http://www.atgc-montpellier.fr/download/papers/phyml_2010.pdf)) and [website](http://www.atgc-montpellier.fr/phyml/) for input information.
+Please refer to Phyml [article](http://www.atgc-montpellier.fr/download/papers/phyml_2010.pdf) and [website](http://www.atgc-montpellier.fr/phyml/) for input information.
 
 #### Example pictures
 Home Page:
