@@ -34,12 +34,15 @@ Per default, it should be <http://localhost:8084> but may change depending on yo
 Please refer to Phyml [article]((http://www.atgc-montpellier.fr/download/papers/phyml_2010.pdf)) and [website](http://www.atgc-montpellier.fr/phyml/) for input information.
 
 #### Example pictures
-
+Home Page:
 ![Alt text](/Sélection_021.jpg?raw=true "home")
 
+Start a New analysis:
 ![Alt text](/Sélection_022.jpg?raw=true "New analysis")
 
+View outputs:
 ![Alt text](/Sélection_023.jpg?raw=true "view")
 
+display output file:
 ![Alt text](/Sélection_024.jpg?raw=true "output description")
 
